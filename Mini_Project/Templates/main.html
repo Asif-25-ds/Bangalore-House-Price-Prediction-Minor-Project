@@ -1,0 +1,53 @@
+<html>
+    <head><title>House Price Prediction</title></head>
+    <body>
+
+        <h2 align="center">Input Your Requirements for Price</h2>
+        <form action="{{url_for('predict_price')}}" method="post" target="_blank">
+            Number of Balconies : <input type="number" name="balcony"><br><br>
+            Bath : <input type="number" name="bath"><br><br>
+            Total Square Feet : <input type="number" name="total_sqft"><br><br>
+            {% include 'location.html' %}
+
+            <br><br>
+            Size :
+            <select name="size">
+                <option>2 BHK</option>
+                '<option>4 Bedroom</option>
+                '<option>3 BHK</option>
+                '<option>4 BHK</option>
+                '<option>6 Bedroom</option>
+                '<option>3 Bedroom</option>
+                '<option>1 BHK</option>
+                '<option>1 RK</option>
+                '<option>1 Bedroom</option>
+                '<option>8 Bedroom</option>
+                '<option>2 Bedroom</option>
+                '<option>7 Bedroom</option>
+                '<option>5 BHK</option>
+                '<option>7 BHK</option>
+                '<option>6 BHK</option>
+                '<option>5 Bedroom</option>
+                '<option>11 BHK</option>
+                '<option>9 BHK</option>
+                '<option>nan</option>
+                '<option>9 Bedroom</option>
+                '<option>27 BHK</option>
+                '<option>10 Bedroom</option>
+                '<option>11 Bedroom</option>
+                '<option>10 BHK</option>
+                '<option>19 BHK</option>
+                '<option>16 BHK</option>
+                '<option>43 Bedroom</option>
+                '<option>14 BHK</option>
+                '<option>8 BHK</option>
+                '<option>12 Bedroom</option>
+                '<option>13 BHK</option>
+                '<option>18 Bedroom</option>
+                </select><br><br>
+            Remarks:<br><textarea rows="10" cols="60" name="Remarks"></textarea><br><br>
+            <button type="submit" name="Predict">Get Price</but/ton> <button type="reset">Reset</button>
+        </form>
+        <!-- <h2>Your entered data -{{result}}</h2> -->
+    </body>
+</html>
